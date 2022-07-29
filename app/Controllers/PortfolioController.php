@@ -8,6 +8,6 @@ class PortfolioController extends Controller
 {
     public function index()
     {
-        return "My Portfolio here";
+        return "My Portfolio here 28.01 min";
     }
 }

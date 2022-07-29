@@ -5,6 +5,10 @@ use Pecee\SimpleRouter\SimpleRouter;
 //Autoload the vendor
 require_once __DIR__ . '/vendor/autoload.php';
 
+define('ROOT', __DIR__);
+
+define('VIEWS', __DIR__ . '/views');
+
 /* Load external routes file */
 require_once 'routes/route.php';
 
