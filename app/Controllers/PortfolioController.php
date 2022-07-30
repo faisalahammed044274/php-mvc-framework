@@ -9,15 +9,14 @@ class PortfolioController extends Controller
     public function index()
     {
 
+        $user = 'root';
+        $pass = '';
+
         try {
-            $dbh = new PDO('mysql:host=localhost;dbname=php_mvc', 'root', '');
-            foreach ($dbh->query('SELECT * from FOO') as $row) {
-                print_r($row);
-            }
-            $dbh = null;
-        } catch (PDOException $e) {
-            print "Eroor!:" . $e->getMessage() . "<br/>";
-            die();
+            $dbh = new \PDO('mysql:host=localhost;dbname=php_mvc', $user, $pass);
+            echo '<small style="color:green; background: lightgreen; padding:10px; border-radius:8px;">Connection successful !</small>';
+        } catch (\Throwable$th) {
+            throw $th;
         }
 
         return views('portfolios/portfolio.php');
