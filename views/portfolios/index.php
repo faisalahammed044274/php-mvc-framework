@@ -7,27 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
 </head>
-<style>
-    h1 {
-        background: green;
-        color: white;
-        padding: 10px;
-        text-align: center;
-    }
-
-    h2 {
-        background: gray;
-        color: white;
-        padding: 60px;
-    }
-
-    .list {
-        background: yellow;
-        color: green;
-        padding: 18px;
-        border-radius: 10px;
-    }
-</style>
 
 <body>
     <div class="list">

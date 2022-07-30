@@ -10,6 +10,8 @@ class Portfolio extends Model
     protected string $tableName = 'portfolios';
 
     public function get()
+
+
     {
         return $this->fetchAll("SELECT * FROM {$this->tableName}");
     }
