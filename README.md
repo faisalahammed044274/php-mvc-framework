@@ -2,5 +2,5 @@
 
 Simple and Lightweight PHP MVC Framework
 
-use packages :
+used packages :
 pecee/simple-router
