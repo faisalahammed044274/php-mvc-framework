@@ -13,7 +13,7 @@ class PortfolioController extends Controller
         $pass = '';
 
         try {
-            $dbh = new \PDO('mysql:host=localhost;dbname=php_mvc', $user, $pass);
+            $pdo = new \PDO('mysql:host=localhost;dbname=php_mvc', $user, $pass);
             echo '<small style="color:green; background: lightgreen; padding:10px; border-radius:8px;">Connection successful !</small>';
         } catch (\Throwable$th) {
             throw $th;
