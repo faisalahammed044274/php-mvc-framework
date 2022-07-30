@@ -8,6 +8,6 @@ class WelcomeController extends Controller
 {
     public function hello()
     {
-        require_once VIEWS . '/index.php';
+        return views('index.php');
     }
 }
