@@ -1,5 +1,18 @@
-<link rel="stylesheet" href="<?php echo ASSET_URL . 'css/app.css'; ?>">
+<!DOCTYPE html>
+<html>
 
-<header>
-    <h3>This is header</h3>
-</header>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><?php echo env('APP_TITLE'); ?></title>
+    <!-- Load Styles -->
+    <link rel="stylesheet" href="<?php echo assets('css/app.css'); ?>">
+</head>
+
+<body>
+    <!-- Load Header Nav -->
+    <?php views('/partials/nav.php'); ?>
+    <!-- Content Start -->
+</body>
+
+</html>

@@ -42,7 +42,7 @@ class Model
                 throw new Exception('please provide Database Information');
             }
 
-            return new \PDO("mysql:host=$dbHost;dbname=$dbName;port=$dbPort", $dbUser, $dbPassword);
+            return new PDO("mysql:host=$dbHost;dbname=$dbName;port=$dbPort", $dbUser, $dbPassword);
         } catch (\Throwable $th) {
             throw $th;
         }
@@ -59,12 +59,12 @@ class Model
     public function fetchAll(string $sqlQuery)
     {
         $stmt = $this->execute($sqlQuery);
-        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function fetchObj(string $sqlQuery)
     {
         $stmt = $this->execute($sqlQuery);
-        return $stmt->fetch(\PDO::FETCH_ASSOC);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 }

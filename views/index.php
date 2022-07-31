@@ -11,7 +11,6 @@
 <body>
     <div class="div" style="background:green; color:honeydew; padding:10px;">
         <center>
-            <h2><?php echo env('APP_TITLE'); ?></h2>
             <h3>Welcome to the MVC.</h3>
         </center>
 
