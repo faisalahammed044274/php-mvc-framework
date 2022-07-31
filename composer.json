@@ -20,6 +20,7 @@
     "minimum-stability": "dev",
     "require": {
         "pecee/simple-router": "dev-master",
-        "php" : "> 7.1"
+        "php" : "> 7.1",
+        "vlucas/phpdotenv": "5.4.x-dev"
     }
 }

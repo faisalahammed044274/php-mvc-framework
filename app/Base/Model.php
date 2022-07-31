@@ -2,6 +2,7 @@
 
 namespace App\Base;
 
+use Exception;
 use PDO;
 
 class Model
@@ -14,11 +15,39 @@ class Model
     public function connectDb()
     {
 
-        $user = 'root';
-        $pass = '';
-
         try {
-            return new \PDO('mysql:host=localhost;dbname=php_mvc', $user, $pass);
+
+            $dbHost = isset($_ENV['DB_HOST']) ? $_ENV['DB_HOST'] : '';
+            if (empty($dbHost)) {
+                throw new Exception('please provide Database HOST');
+            };
+
+            $dbPort = isset($_ENV['DB_PORT']) ? $_ENV['DB_PORT'] : '';
+            if (empty($dbPort)) {
+                throw new Exception('please provide Database PORT');
+            };
+
+            $dbName = isset($_ENV['DB_NAME']) ? $_ENV['DB_NAME'] : '';
+            if (empty($dbName)) {
+                throw new Exception('please provide Database Name.');
+            }
+
+            $dbUser = isset($_ENV['DB_USER']) ? $_ENV['DB_USER'] : '';
+            if (empty($dbUser)) {
+                throw new Exception('please provide Database USERNAME');
+            }
+
+            $dbPassword = isset($_ENV['DB_PASSWORD']) ? $_ENV['DB_PASSWORD'] : '';
+            if (empty($dbPassword)) {
+                throw new Exception('please provide Database Information');
+            }
+
+            $dbName = isset($_ENV['DB_NAME']) ? $_ENV['DB_NAME'] : '';
+            if (empty($dbName)) {
+                throw new Exception('please provide Database Information');
+            }
+
+            return new \PDO("mysql:host=$dbHost;dbname=$dbName;port=$dbPort", $dbUser, $dbPassword);
         } catch (\Throwable $th) {
             throw $th;
         }
