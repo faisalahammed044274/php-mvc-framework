@@ -7,7 +7,7 @@ use App\Base\Model;
 class Portfolio extends Model
 {
 
-    protected string $tableName = 'portfolios';
+    protected $tableName = 'portfolios';
 
     public function get()
 

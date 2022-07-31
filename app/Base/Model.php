@@ -62,7 +62,7 @@ class Model
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
 
-    public function fetchObj(string $sqlQuery): mixed
+    public function fetchObj(string $sqlQuery)
     {
         $stmt = $this->execute($sqlQuery);
         return $stmt->fetch(\PDO::FETCH_ASSOC);
