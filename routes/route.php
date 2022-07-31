@@ -4,6 +4,6 @@ use Pecee\SimpleRouter\SimpleRouter;
 use App\Controllers\WelcomeController;
 use App\Controllers\PortfolioController;
 
-SimpleRouter::get('phpmvc/', [WelcomeController::class, 'hello']);
+SimpleRouter::get(BASE_DIR . '/', [WelcomeController::class, 'hello']);
 
-SimpleRouter::get('phpmvc/portfolio', [PortfolioController::class, 'index']);
+SimpleRouter::get(BASE_DIR . '/portfolio', [PortfolioController::class, 'index']);
