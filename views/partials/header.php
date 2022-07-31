@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<link rel="stylesheet" href="<?php echo ASSET_URL . 'css/app.css'; ?>">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo env('APP_TITLE'); ?></title>
-</head>
-
-<body>
-<h3 style="color:honeydew; background: green; padding: 25px;">This is header</h3>
-</body>
-
-</html>
+<header>
+    <h3>This is header</h3>
+</header>

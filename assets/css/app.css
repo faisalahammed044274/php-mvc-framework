@@ -1,0 +1,15 @@
+body {
+  color: #0e0e0e;
+  background: lightgreen;
+}
+
+h3 {
+  padding: 1rem;
+}
+
+header,
+footer {
+  background-color: greenyellow;
+  text-align: center;
+  padding: 10px;
+}

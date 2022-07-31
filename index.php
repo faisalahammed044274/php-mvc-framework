@@ -12,9 +12,12 @@ $dotenv->load();
 
 define('ROOT', __DIR__);
 define('VIEWS', __DIR__ . '/views');
+define('ASSET_DIR', __DIR__ . '/assets');
+//style adds
 define('BASE_DIR', isset($_ENV['BASE_DIR']) ? $_ENV['BASE_DIR'] : '');
-//define()
-var_dump($_ENV['BASE_DIR']);
+define('URL', $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . '/' . BASE_DIR);
+define('ASSET_URL', URL . '/assets/');
+// var_dump($_ENV['BASE_DIR']);
 
 
 /* Load external routes file */
