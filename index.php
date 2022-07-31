@@ -12,7 +12,7 @@ $dotenv->load();
 
 define('ROOT', __DIR__);
 define('VIEWS', __DIR__ . '/views');
-
+define('BASE_DIR', isset($_ENV['BASE_DIR']) ? $_ENV['BASE_DIR'] : '');
 //define()
 var_dump($_ENV['BASE_DIR']);
 
