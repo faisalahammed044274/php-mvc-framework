@@ -18,3 +18,15 @@ function views(string $path, array $data = []): void
     //Start Output buffering
     require_once VIEWS . '/' . $path;
 }
+
+/**
+ * Get environment variable data by key
+ * 
+ * @param string $key
+ * @return string
+ */
+
+function env(string $key): string
+{
+    return isset($_ENV[$key]) ? $_ENV[$key] : '';
+}
