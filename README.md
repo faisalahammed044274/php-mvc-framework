@@ -3,5 +3,4 @@
 Simple and Lightweight PHP MVC Framework
 
 used packages :
-pecee/simple-router
-vlucas /phpdotenv
+pecee/simple-router, vlucas /phpdotenv
