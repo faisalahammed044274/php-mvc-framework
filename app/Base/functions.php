@@ -30,3 +30,8 @@ function env(string $key): string
 {
     return isset($_ENV[$key]) ? $_ENV[$key] : '';
 }
+
+function assets(string $path)
+{
+    return ASSET_URL . '/' . $path;
+}
