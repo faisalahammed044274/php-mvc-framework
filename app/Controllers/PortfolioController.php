@@ -12,7 +12,8 @@ class PortfolioController extends Controller
     public function index()
     {
         $portfolio = new Portfolio();
-        $portfolio = $portfolio->get();
+        // $status = $_GET['status'];
+        $portfolios = $portfolio->get();
 
         return views('portfolios/index.php', ['portfolios' => $portfolio]);
         // return views('portfolios/index.php', compact('portfolio'));

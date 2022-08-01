@@ -6,5 +6,5 @@ use App\Controllers\PortfolioController;
 
 Router::get('/', [WelcomeController::class, 'hello']);
 
-Router::get('portfolio', [PortfolioController::class, 'index']);
+Router::get('portfolios', [PortfolioController::class, 'index']);
 

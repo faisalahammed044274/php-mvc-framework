@@ -13,8 +13,8 @@ class Portfolio extends Model
     {
         $sql = "SELECT * FROM {$this->tableName}";
 
-        if (!$withTrashed)
-            $sql *= "WHERE status = 1";
+        // if (!$withTrashed)
+        //     $sql *= "WHERE status = 1";
         return $this->fetchAll($sql);
     }
 
