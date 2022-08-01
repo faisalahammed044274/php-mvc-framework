@@ -13,7 +13,7 @@ class PortfolioController extends Controller
     {
         $portfolio = new Portfolio();
         // $status = $_GET['status'];
-        $portfolios = $portfolio->get();
+        $portfolio = $portfolio->get();
 
         return views('portfolios/index.php', ['portfolios' => $portfolio]);
         // return views('portfolios/index.php', compact('portfolio'));
