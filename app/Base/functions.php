@@ -65,6 +65,7 @@ function assets(string $path)
  */
 function url(?string $name = null, $parameters = null, ?array $getParams = null): Url
 {
+    $name = BASE_DIR . '/' . $name;
     return Router::getUrl($name, $parameters, $getParams);
 }
 

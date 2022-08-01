@@ -1,10 +1,8 @@
 <nav>
     <ul>
         <li>
-            <a href="/">Home</a>
-            <a href="/portfolios">Portfolios</a>
-            <a href="/contact">Contact</a>
-            <a href="/about">About</a>
+            <a href="<?php echo url('/') ?>">Home</a>
+            <a href="<?php echo url('portfolio') ?>">Portfolio</a>
         </li>
     </ul>
 

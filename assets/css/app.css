@@ -1,34 +1,35 @@
-body {
-  color: #525252;
-  background: #76ff93;
+* {
+  margin: 0 auto;
 }
 
-h3 {
-  padding: 1rem;
-}
+/************************************
+/*            Header CSS           */
+/************************************/
 
-footer,
-nav {
-  background-color: #aaaaaa;
-  text-align: center;
-  padding: 2px;
-}
-nav ul li {
+nav ul {
   list-style: none;
+  margin: 0;
+  padding: 0 80px;
+  background: #398839;
 }
 
 nav ul li a {
-  color: #525252;
+  padding: 10px;
+  color: #fff;
+  display: inline-block;
   text-decoration: none;
-  margin-left: 32px;
 }
 
-div.emptySpace {
-  padding: 9rem;
+/************************************
+/*            Content CSS           */
+/************************************/
+
+.main-content {
+  padding: 0 50px;
+  margin-left: 10px;
 }
 
-.list{
-  text-align: center;
-  color: #525252;
-  list-style: none;
+.list {
+  margin-left: 40px;
+  margin-top: 20px;
 }

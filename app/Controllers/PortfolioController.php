@@ -11,7 +11,7 @@ class PortfolioController extends Controller
 {
     public function index()
     {
-        $portfolio = new Portfolio;
+        $portfolio = new Portfolio();
         $portfolio = $portfolio->get();
 
         return views('portfolios/index.php', ['portfolios' => $portfolio]);

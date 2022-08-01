@@ -13,6 +13,5 @@
     <!-- Load Header Nav -->
     <?php views('/partials/nav.php'); ?>
     <!-- Content Start -->
-</body>
-
-</html>
+    <div class="main-container">
+        <!-- Content will be loaded here. -->

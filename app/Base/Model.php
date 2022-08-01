@@ -48,23 +48,24 @@ class Model
         }
     }
 
-    function execute(string $sqlQuery)
+    function execute(string $sqlQuery, array $bindParams = []): \PDOStatement
     {
-        $stmt = $this->connectDb()->query($sqlQuery);
-        $stmt->execute();
+        $pdo = $this->connectDb();
+        $stmt = $pdo->prepare($sqlQuery);
+        $stmt->execute($bindParams);
 
         return $stmt;
     }
 
-    public function fetchAll(string $sqlQuery)
+    public function fetchAll(string $sqlQuery, array $bindParams = [])
     {
-        $stmt = $this->execute($sqlQuery);
+        $stmt = $this->execute($sqlQuery, $bindParams);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function fetchObj(string $sqlQuery)
+    public function fetchObj(string $sqlQuery, array $bindParams = [])
     {
-        $stmt = $this->execute($sqlQuery);
+        $stmt = $this->execute($sqlQuery, $bindParams);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 }

@@ -9,11 +9,13 @@ class Portfolio extends Model
 
     protected $tableName = 'portfolios';
 
-    public function get()
-
-
+    public function get(bool $withTrashed = true)
     {
-        return $this->fetchAll("SELECT * FROM {$this->tableName}");
+        $sql = "SELECT * FROM {$this->tableName}";
+
+        if (!$withTrashed)
+            $sql *= "WHERE status = 1";
+        return $this->fetchAll($sql);
     }
 
     public function findById(int $id)

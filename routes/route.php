@@ -1,9 +1,10 @@
 <?php
 
-use Pecee\SimpleRouter\SimpleRouter;
+use App\Base\Router;
 use App\Controllers\WelcomeController;
 use App\Controllers\PortfolioController;
 
-SimpleRouter::get(BASE_DIR . '/', [WelcomeController::class, 'hello']);
+Router::get('/', [WelcomeController::class, 'hello']);
 
-SimpleRouter::get(BASE_DIR . '/portfolio', [PortfolioController::class, 'index']);
+Router::get('portfolio', [PortfolioController::class, 'index']);
+
